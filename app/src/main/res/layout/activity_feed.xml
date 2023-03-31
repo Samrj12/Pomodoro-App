@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_for_app"
+    tools:context=".FeedActivity">
+
+    <TextView
+        android:id="@+id/tv_round"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/white_circle"
+        android:gravity="center"
+        android:text="1/5"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Get Ready"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_round" />
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/item_circular_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_status">
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:background="@drawable/item_circular_grey"
+                android:progressDrawable="@drawable/item_circular_blue"                style = "?android:attr/progressBarStyleHorizontal"
+                android:indeterminate="false" android:rotation="90"/>
+            <TextView
+                android:id="@+id/tv_timer"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_gravity="center"
+                android:background="@drawable/solid_green"
+                android:gravity="center"
+                android:text="10"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                android:textStyle="bold"/>
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/iv_stop"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/white_circle"
+        android:src="@drawable/baseline_stop_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frame_layout" />
+</androidx.constraintlayout.widget.ConstraintLayout>
